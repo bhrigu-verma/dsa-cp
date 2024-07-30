@@ -13,6 +13,7 @@ class node {
         this->right=NULL;
     }
 };
+//tree builder accepting values
 node *buildtree(node* root){
     cout<<"Enter the data"<<endl;
     int data;
