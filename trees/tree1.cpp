@@ -16,7 +16,7 @@ node *buildtree(node* root){
     cout<<"Enter the data"<<endl;
     int data;
     cin>>data;
-    root =new node(data);
+    root =new node(data); 
     if(data==-1){return NULL;}
     cout<<"Enter the data for inserting in left of"<< data<<endl;
     root->left = buildtree(root->left);
