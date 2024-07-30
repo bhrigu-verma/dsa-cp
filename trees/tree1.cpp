@@ -30,17 +30,17 @@ node *buildtree(node* root){
 //traverse in leveling
 void levelordertraversal(node* root){
         queue<node*> children;
-        q.push(root);
-        q.push(NULL);
-        while(!q.empty()){
-            node* temp=q.front();
-            q.pop();
+        children.push(root);
+        children.push(NULL);
+        while(!children.empty()){
+            node* temp=children.front();
+            children.pop();
             if(temp==NULL){
                 //PURANA LEVEL COMPLETE TRAVERSE HO CHUKA HAI 
                 cout<<endl;
-                if(!q.empty()){
+                if(!children.empty()){
                     //queue still has some child nodes
-                    q.push( NULL);
+                    children.push( NULL);
 
                 }
   
@@ -48,10 +48,10 @@ void levelordertraversal(node* root){
             else{
                 cout<<temp->data<<" ";
                 if(temp->left){
-                    q.push(temp->left);
+                    children.push(temp->left);
                 }
                 if(temp->right){
-                    q.push(temp->right);
+                    children.push(temp->right);
                 }
 
             }
