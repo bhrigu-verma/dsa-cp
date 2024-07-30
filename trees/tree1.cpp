@@ -27,6 +27,7 @@ node *buildtree(node* root){
     return root;
 
 }
+//traverse in leveling
 void levelordertraversal(node* root){
         queue<node*> children;
         q.push(root);
