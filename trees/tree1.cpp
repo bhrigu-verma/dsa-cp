@@ -6,7 +6,7 @@ class node {
     int data;
     node* left;
     node* right;
-
+ //node constructor
     node (int d){
         this->data = d;
         this->left=NULL;
