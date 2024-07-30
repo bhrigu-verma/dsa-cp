@@ -1,4 +1,5 @@
 #include<iostream>
+#include <queue>
 using namespace std;
 class node {
     public:
@@ -25,6 +26,37 @@ node *buildtree(node* root){
     return root;
 
 }
+void levelordertraversal(node* root){
+        queue<node*> children;
+        q.push(root);
+        q.push(NULL);
+        while(!q.empty()){
+            node* temp=q.front();
+            q.pop();
+            if(temp==NULL){
+                //PURANA LEVEL COMPLETE TRAVERSE HO CHUKA HAI 
+                cout<<endl;
+                if(!q.empty()){
+                    //queue still has some child nodes
+                    q.push( NULL);
+
+                }
+  
+            }
+            else{
+                cout<<temp->data<<" ";
+                if(temp->left){
+                    q.push(temp->left);
+                }
+                if(temp->right){
+                    q.push(temp->right);
+                }
+
+            }
+        }
+
+}
+ 
 int main(){
     node* root= NULL;
     root = buildtree(root);
